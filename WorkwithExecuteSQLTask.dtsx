@@ -1,0 +1,237 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/4/2024 1:19:07 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MOHIUDDIN"
+  DTS:CreatorName="MOHIUDDIN\kmans"
+  DTS:DTSID="{75A243FE-FB5A-4B74-B317-C2B0CD84D6E6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{CA070A92-ABEF-4926-A649-A8B0BC11BF06}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MOHIUDDIN.TestDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5F772788-AEF3-4D04-AEFF-30A055F08420}"
+      DTS:ObjectName="MOHIUDDIN.TestDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MOHIUDDIN;Initial Catalog=TestDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{5F772788-AEF3-4D04-AEFF-30A055F08420}MOHIUDDIN.TestDB;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[myquery.sql]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{93FE9166-4E4E-40D9-B35B-427CC08BBEF1}"
+      DTS:ObjectName="myquery.sql">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="D:\Mohi\SSISProjects\SSIS Practice\myquery.sql" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4ADCE535-AB3C-4EB6-84FC-9F3DDB5B70E1}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AGE">
+      <DTS:VariableValue
+        DTS:DataType="3">35</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2C8278CD-D4F8-4F3C-83EE-8E4556690F0C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="GENDER">
+      <DTS:VariableValue
+        DTS:DataType="8">M</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FF627B82-A51C-4C75-BFD1-065CD34B3DCB}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="NAME">
+      <DTS:VariableValue
+        DTS:DataType="8">Ansari</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CC0F20E7-F98B-439E-BE33-00CF90F8EEF8}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;&#xA;INSERT INTO PERSON VALUES( '&quot;+@[User::NAME]+&quot;','&quot;+ @[User::GENDER]+ &quot;',&quot; +(DT_WSTR, 12) @[User::AGE]+&quot; )&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="QueryResult">
+      <DTS:VariableValue
+        DTS:DataType="8">
+INSERT INTO PERSON VALUES( 'Ansari','M',35 )</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create and insert data into table (DIRECT)"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Create and insert data into table "
+      DTS:Disabled="True"
+      DTS:DTSID="{2CBDABFE-B134-403F-8773-384531738238}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create and insert data into table (DIRECT)"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5F772788-AEF3-4D04-AEFF-30A055F08420}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME=N'PERSON')&#xA;CREATE TABLE PERSON(ID INT IDENTITY, NAME VARCHAR(30), GENDER VARCHAR(1), AGE INT)&#xA;GO&#xA;INSERT INTO PERSON VALUES('MOHIUDDIN','M',27)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Create and insert data into table(PARAMETER - Expression)"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Create and insert data into table "
+      DTS:Disabled="True"
+      DTS:DTSID="{c89b3817-7126-406e-b490-144384fc652d}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create and insert data into table(PARAMETER - Expression)"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"
+INSERT INTO PERSON VALUES( '"+@[User::NAME]+"','"+ @[User::GENDER]+ "'," +(DT_WSTR, 12) @[User::AGE]+" )
+
+"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5F772788-AEF3-4D04-AEFF-30A055F08420}"
+          SQLTask:SqlStatementSource="&#xA;INSERT INTO PERSON VALUES( 'Ansari','M',35 )&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Create and insert data into table(PARAMETER - file)"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Create and insert data into table "
+      DTS:DTSID="{1061946e-9cd0-4611-ac4b-9219fc1a4f73}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create and insert data into table(PARAMETER - file)"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="4">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5F772788-AEF3-4D04-AEFF-30A055F08420}"
+          SQLTask:SqlStmtSourceType="FileConnection"
+          SQLTask:SqlStatementSource="myquery.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Create and insert data into table(PARAMETER - variable)"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Create and insert data into table "
+      DTS:Disabled="True"
+      DTS:DTSID="{a304b2a5-d1e8-4808-8026-e137ae21710d}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create and insert data into table(PARAMETER - variable)"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5F772788-AEF3-4D04-AEFF-30A055F08420}"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::QueryResult" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Create and insert data into table(PARAMETER)"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Create and insert data into table "
+      DTS:Disabled="True"
+      DTS:DTSID="{93c12893-1dc3-4156-86d0-ae46301ea04b}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create and insert data into table(PARAMETER)"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5F772788-AEF3-4D04-AEFF-30A055F08420}"
+          SQLTask:SqlStatementSource="INSERT INTO PERSON VALUES(?,?,?)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::NAME"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::GENDER"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::AGE"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="278.4,41.6"
+          Id="Package\Create and insert data into table (DIRECT)"
+          TopLeft="63.3571429803056,71.2647058247076" />
+        <NodeLayout
+          Size="358.4,41.6"
+          Id="Package\Create and insert data into table(PARAMETER - Expression)"
+          TopLeft="70.0000001490116,181.235293958787" />
+        <NodeLayout
+          Size="344.8,41.6"
+          Id="Package\Create and insert data into table(PARAMETER - variable)"
+          TopLeft="72.1428572964302,230.94117626816" />
+        <NodeLayout
+          Size="297.6,41.6"
+          Id="Package\Create and insert data into table(PARAMETER)"
+          TopLeft="67.6428572751431,126.217647042066" />
+        <NodeLayout
+          Size="321.6,41.6"
+          Id="Package\Create and insert data into table(PARAMETER - file)"
+          TopLeft="75.0000001596554,283.717646825561" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

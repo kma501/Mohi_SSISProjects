@@ -1,0 +1,6 @@
+"AddressID","AddressLine1","AddressLine2","City","StateProvinceID","PostalCode","rowguid","ModifiedDate"
+"403","8040 Erie Dr","6 Monteira","Houston","73","77003","{213A7A5B-3782-4E40-991B-325A2B93F770}","2012-02-18 00:00:00"
+"587","25500 Old Spanish Trail","","Houston","73","77003","{9A71E3C4-CAEA-4C5C-A146-5B85A513D82F}","2011-07-01 00:00:00"
+"592","9903 Highway 6 South","","Houston","73","77003","{CE585616-C47C-4BD4-8D71-1755B6417770}","2011-05-31 00:00:00"
+"593","2345 North Freeway","","Houston","73","77003","{74E5959F-4C5F-4BDA-ABCF-429762E1670D}","2011-07-01 00:00:00"
+"623","Ohms Road","","Houston","73","77003","{D4688E5C-2D2D-4925-B58A-356C117728D8}","2013-05-30 00:00:00"

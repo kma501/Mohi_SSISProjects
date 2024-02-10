@@ -1,0 +1,5 @@
+"AddressID","AddressLine1","AddressLine2","City","StateProvinceID","PostalCode","rowguid","ModifiedDate"
+"793","6225 Glenway Ave.","","Cincinnati","55","45202","{B8F8E86F-120D-4440-B284-E6C594C08924}","2012-06-30 00:00:00"
+"817","Cherry Grove Plaza","","Cincinnati","55","45202","{65666EA2-D3E4-4A45-B61E-D500B63C7C09}","2011-08-01 00:00:00"
+"12029","664 Book Pl","","Cincinnati","55","45202","{1209BE7F-BE88-4A28-A060-F2435134C27C}","2013-11-09 00:00:00"
+"20090","1044 San Carlos","","Cincinnati","55","45202","{16C68606-F8E4-46C4-BF4E-DCA27974E280}","2013-11-29 00:00:00"

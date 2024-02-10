@@ -1,0 +1,5 @@
+"AddressID","AddressLine1","AddressLine2","City","StateProvinceID","PostalCode","rowguid","ModifiedDate"
+"357","683 Larch Ct.","","Salt Lake City","74","84101","{B870F6AC-D9A3-4909-A176-7B934A1785D9}","2012-01-25 00:00:00"
+"359","6119 11th","","Salt Lake City","74","84101","{E16AB1F6-C0C6-40EA-884F-C80C09BB2EC9}","2012-01-25 00:00:00"
+"990","5420 West 22500 South","","Salt Lake City","74","84101","{7612C47A-E24A-4BD8-9B8B-3AED15AF64F9}","2012-05-30 00:00:00"
+"996","2575 West 2700 South","","Salt Lake City","74","84101","{708FC1DD-4994-4AA5-80A5-8C977C37AA15}","2012-06-30 00:00:00"

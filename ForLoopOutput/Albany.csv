@@ -1,0 +1,5 @@
+"AddressID","AddressLine1","AddressLine2","City","StateProvinceID","PostalCode","rowguid","ModifiedDate"
+"366","1619 Mills Dr.","","Albany","58","97321","{A61B581D-A6DB-4C28-A5A2-FA3FE369BAE3}","2012-01-29 00:00:00"
+"376","9098 Story Lane","","Albany","54","12210","{4DDA7288-7870-4369-A67B-18CC99DEEBDF}","2012-02-02 00:00:00"
+"883","Heritage Mall","","Albany","58","97321","{CF9C1921-D741-4576-9D32-849E62D57698}","2013-05-30 00:00:00"
+"896","2255 254th Avenue Se","","Albany","58","97321","{77D18072-B99B-4B1E-A9B9-948FA927EFBB}","2013-07-31 00:00:00"

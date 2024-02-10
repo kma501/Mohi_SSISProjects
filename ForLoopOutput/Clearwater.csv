@@ -1,0 +1,5 @@
+"AddressID","AddressLine1","AddressLine2","City","StateProvinceID","PostalCode","rowguid","ModifiedDate"
+"925","23456 Calumet St","","Clearwater","15","33755","{0B60E995-E3FA-47AA-8C31-2B4944BF8877}","2013-08-30 00:00:00"
+"971","Bay Area Outlet Mall","","Clearwater","15","33755","{1CEDF0C5-CCB0-4408-A7A6-E1687F969E69}","2011-05-31 00:00:00"
+"11545","5243 Harmony Way","","Clearwater","15","33755","{88C08C23-EB51-4247-9E74-85D34F1E0C2B}","2012-11-30 00:00:00"
+"20586","2530 Willow Court","","Clearwater","15","33755","{AFAFB2BF-F3FF-427B-B53A-4FD8514A412C}","2013-04-27 00:00:00"

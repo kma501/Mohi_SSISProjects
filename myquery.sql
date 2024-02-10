@@ -1,0 +1,1 @@
+INSERT INTO PERSON VALUES( 'Mohsin','M',24 )

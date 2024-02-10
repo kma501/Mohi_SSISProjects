@@ -1,0 +1,5 @@
+"AddressID","AddressLine1","AddressLine2","City","StateProvinceID","PostalCode","rowguid","ModifiedDate"
+"1023","870 N. 54th Ave.","","Chandler","6","85225","{26D3A3EC-3D51-493E-A541-A0CC80B54F35}","2013-05-30 00:00:00"
+"1095","9980 S Alma School Road","","Chandler","6","85225","{B09B3F8E-89F2-4528-9578-53CBCF805B4A}","2012-12-31 00:00:00"
+"24772","7656 Ramsey Circle","","Chandler","6","85225","{706A77A3-2E6E-4F7D-A8BE-21C79B31E419}","2013-04-21 00:00:00"
+"26956","4584 Hamiliton Ave.","","Chandler","6","85225","{BA88DE55-AB5F-4A4F-B2AA-C17805BDD5B0}","2013-09-03 00:00:00"

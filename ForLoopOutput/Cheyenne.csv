@@ -1,0 +1,5 @@
+"AddressID","AddressLine1","AddressLine2","City","StateProvinceID","PostalCode","rowguid","ModifiedDate"
+"875","2540 Dell Range Blvd","","Cheyenne","82","82001","{3AC8958A-76EE-41CA-8A88-2B783EA18ACC}","2012-05-30 00:00:00"
+"892","Frontier Mall","","Cheyenne","82","82001","{CB0A8223-FD82-4D26-B7C7-0C120E4EAFC5}","2011-07-01 00:00:00"
+"900","25708 Dell Range Blvd.","","Cheyenne","82","82001","{9B10FE3A-A1FB-497E-8BC2-E84E8C2A77DA}","2011-05-31 00:00:00"
+"26151","4778 Geary Road","","Cheyenne","82","82001","{AB8B1980-CE17-45F8-9A25-856CF642BF51}","2012-03-11 00:00:00"

@@ -1,0 +1,23 @@
+ProductID,Name,SafetyStockLevel,StandardCost,ListPrice,SubCategoryName,
+749,Road-150 Red,62,100,1000000,3578.27,Components
+750,Road-150 Red,44,100,2171.2942,3578.27,Components
+751,Phone,100,2171.2942,3578.27,Components,
+752,Road-150 Red,52,100,2171.2942,3578.27,Components
+753,Road-150 Red,56,100,2171.2942,3578.27,Components
+754,Road-450 Red,58,100,884.7083,1457.99,Components
+755,Road-450 Red,60,100,884.7083,1457.99,Components
+756,Road-450 Red,44,100,884.7083,1457.99,Components
+757,Road-450 Red,48,100,884.7083,1457.99,Components
+758,Road-450 Red,52,100,1000000,1457.99,Components
+759,Phone,100,486.7066,782.99,Components,
+760,Road-650 Red,60,100,486.7066,782.99,Components
+762,Road-650 Red,44,100,486.7066,782.99,Components
+763,Road-650 Red,48,100,486.7066,782.99,Components
+764,Road-650 Red,52,100,486.7066,782.99,Components
+766,Road-650 Black,60,100,486.7066,782.99,Components
+767,Phone,100,486.7066,782.99,Components,
+768,Road-650 Black,44,100,486.7066,782.99,Components
+769,Road-650 Black,48,100,1000000,782.99,Components
+771,Phone,100,1912.1544,3399.99,Bikes,
+772,Mountain-100 Silver,42,100,1912.1544,3399.99,Bikes
+773,Phone,100,1912.1544,3399.99,Bikes,
